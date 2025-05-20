@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#e74c3c">
     <title>IMODA - Мужская одежда</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -239,10 +240,124 @@
         </div>
     </div>
 
+    <!-- Модальное окно оформления заказа -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-modal-content">
+            <div class="checkout-modal-header">
+                <h3>Оформление заказа</h3>
+                <span class="close-checkout">&times;</span>
+            </div>
+            <div class="checkout-form-container">
+                <form id="checkout-form">
+                    <div class="checkout-section">
+                        <h4>Личные данные</h4>
+                        <div class="form-group">
+                            <label for="customer-name">Имя и фамилия*</label>
+                            <input type="text" id="customer-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-email">Email*</label>
+                            <input type="email" id="customer-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-phone">Телефон*</label>
+                            <input type="tel" id="customer-phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-section">
+                        <h4>Доставка</h4>
+                        <div class="form-group">
+                            <label for="delivery-method">Способ доставки*</label>
+                            <select id="delivery-method" required>
+                                <option value="">Выберите способ доставки</option>
+                                <option value="courier">Курьерская доставка</option>
+                                <option value="pickup">Самовывоз</option>
+                                <option value="post">Почта России</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-city">Город*</label>
+                            <input type="text" id="customer-city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-address">Адрес доставки*</label>
+                            <textarea id="customer-address" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-section">
+                        <h4>Оплата</h4>
+                        <div class="form-group payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="card" checked>
+                                <span class="payment-option-label">
+                                    <i class="fas fa-credit-card"></i>
+                                    Банковской картой
+                                </span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="cash">
+                                <span class="payment-option-label">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    Наличными при получении
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-summary">
+                        <div class="checkout-summary-item">
+                            <span>Сумма заказа:</span>
+                            <span id="checkout-subtotal">0 ₽</span>
+                        </div>
+                        <div class="checkout-summary-item">
+                            <span>Доставка:</span>
+                            <span id="checkout-delivery">0 ₽</span>
+                        </div>
+                        <div class="checkout-summary-item total">
+                            <span>Итого к оплате:</span>
+                            <span id="checkout-total">0 ₽</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group agreement">
+                        <label>
+                            <input type="checkbox" id="terms-agreement" required>
+                            Я согласен с условиями <a href="#">публичной оферты</a> и <a href="#">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn place-order-btn">Подтвердить заказ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно подтверждения заказа -->
+    <div class="order-confirmation-modal" id="orderConfirmationModal">
+        <div class="order-confirmation-content">
+            <div class="order-confirmation-header">
+                <h3>Заказ успешно оформлен!</h3>
+                <span class="close-confirmation">&times;</span>
+            </div>
+            <div class="order-confirmation-body">
+                <div class="order-icon-success">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <p>Ваш заказ <span id="order-number"></span> успешно оформлен!</p>
+                <p>Информация о заказе отправлена на указанный email.</p>
+                <p>Наш менеджер свяжется с вами в ближайшее время для подтверждения.</p>
+                <button class="btn continue-shopping-btn">Продолжить покупки</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Подключение JavaScript файлов -->
     <script src="js/products.js"></script>
     <script src="js/script.js"></script>
     <script src="js/filter-men.js"></script>
+    <script src="js/checkout.js"></script>
 
     <!-- Кнопка "Наверх" -->
     <div class="back-to-top">
