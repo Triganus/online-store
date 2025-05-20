@@ -1,5 +1,7 @@
 # MODA - Онлайн магазин одежды
 
+GitHub Pages: https://triganus.github.io/online-store/
+
 Современный онлайн-магазин одежды, разработанный на HTML, CSS и JavaScript.
 
 ## Особенности проекта
