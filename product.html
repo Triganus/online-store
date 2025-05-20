@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e74c3c">
+    <title>Страница товара - IMODA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/product-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">IMODA</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="main-nav">
+                    <ul class="menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="women.html">Женщинам</a></li>
+                        <li><a href="men.html">Мужчинам</a></li>
+                        <li><a href="accessories.html">Аксессуары</a></li>
+                        <li><a href="sale.html">Распродажа</a></li>
+                    </ul>
+                </nav>
+                <div class="user-controls">
+                    <div class="search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="user">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay"></div>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> / <a href="index.html#women">Женщинам</a> / <span id="product-title">Название товара</span>
+            </div>
+            
+            <div class="product-container">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="main-product-image" src="https://source.unsplash.com/random/800x1000/?tshirt,women" alt="Товар">
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active">
+                            <img src="https://source.unsplash.com/random/800x1000/?tshirt,women" alt="Товар - вид 1">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://source.unsplash.com/random/800x1000/?tshirt,women,front" alt="Товар - вид 2">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://source.unsplash.com/random/800x1000/?tshirt,women,back" alt="Товар - вид 3">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://source.unsplash.com/random/800x1000/?tshirt,women,detail" alt="Товар - вид 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 id="product-name">Базовая футболка</h1>
+                    
+                    <div class="product-price-container">
+                        <span class="product-price" id="product-price">1290 ₽</span>
+                        <span class="product-old-price" id="product-old-price"></span>
+                    </div>
+                    
+                    <div class="product-colors">
+                        <h3>Цвет:</h3>
+                        <div class="color-options">
+                            <div class="color-option active" style="background-color: white;" data-color="white"></div>
+                            <div class="color-option" style="background-color: black;" data-color="black"></div>
+                            <div class="color-option" style="background-color: beige;" data-color="beige"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-sizes">
+                        <h3>Размер:</h3>
+                        <div class="size-options">
+                            <div class="size-option" data-size="XS">XS</div>
+                            <div class="size-option active" data-size="S">S</div>
+                            <div class="size-option" data-size="M">M</div>
+                            <div class="size-option" data-size="L">L</div>
+                            <div class="size-option" data-size="XL">XL</div>
+                        </div>
+                        <a href="#" class="size-guide">Таблица размеров</a>
+                    </div>
+                    
+                    <div class="product-quantity">
+                        <h3>Количество:</h3>
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="10" id="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn add-to-cart-btn" id="add-to-cart-btn">Добавить в корзину</button>
+                        <button class="btn-outline favorite-btn"><i class="far fa-heart"></i> В избранное</button>
+                    </div>
+                    
+                    <div class="product-delivery">
+                        <div class="delivery-option">
+                            <i class="fas fa-truck"></i>
+                            <span>Доставка: 1-3 рабочих дня</span>
+                        </div>
+                        <div class="delivery-option">
+                            <i class="fas fa-undo"></i>
+                            <span>Бесплатный возврат в течение 30 дней</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-description">
+                        <h3>Описание:</h3>
+                        <p id="product-description">
+                            Базовая футболка из 100% хлопка с коротким рукавом и круглым вырезом.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="details">Детали</button>
+                    <button class="tab-btn" data-tab="delivery">Доставка и возврат</button>
+                    <button class="tab-btn" data-tab="reviews">Отзывы</button>
+                </div>
+                <div class="tab-content active" id="details-tab">
+                    <h3>Состав и уход</h3>
+                    <ul>
+                        <li>100% хлопок</li>
+                        <li>Машинная стирка при 30°C</li>
+                        <li>Не отбеливать</li>
+                        <li>Гладить при низкой температуре</li>
+                        <li>Не подвергать химической чистке</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="delivery-tab">
+                    <h3>Информация о доставке</h3>
+                    <p>Доставка осуществляется курьером в течение 1-3 рабочих дней после оформления заказа. Стоимость доставки по Москве составляет 290 рублей. При заказе на сумму от 5000 рублей доставка бесплатная.</p>
+                    
+                    <h3>Информация о возврате</h3>
+                    <p>Вы можете вернуть товар в течение 30 дней после получения заказа. Товар должен быть в исходном состоянии, с бирками и в оригинальной упаковке. Для оформления возврата свяжитесь с нашей службой поддержки клиентов.</p>
+                </div>
+                <div class="tab-content" id="reviews-tab">
+                    <h3>Отзывы покупателей</h3>
+                    <div class="review">
+                        <div class="review-header">
+                            <span class="reviewer-name">Анна К.</span>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">Отличная футболка! Материал приятный к телу, не растягивается после стирки. Размер соответствует указанному на сайте.</p>
+                    </div>
+                    <div class="review">
+                        <div class="review-header">
+                            <span class="reviewer-name">Мария Л.</span>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">Хорошая базовая футболка, но немного маломерит. Рекомендую брать на размер больше.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="related-products">
+                <h2>Вам также может понравиться</h2>
+                <div class="product-grid">
+                    <!-- Связанные товары будут добавлены через JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>IMODA</h4>
+                    <p>Модный онлайн-магазин одежды и аксессуаров для мужчин и женщин.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Категории</h4>
+                    <ul>
+                        <li><a href="index.html#women">Женщинам</a></li>
+                        <li><a href="index.html#men">Мужчинам</a></li>
+                        <li><a href="index.html#accessories">Аксессуары</a></li>
+                        <li><a href="index.html#sale">Распродажа</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Модная, 123</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@moda.ru</li>
+                    </ul>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IMODA. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно корзины -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3>Корзина</h3>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-items">
+                <!-- Товары в корзине будут добавлены через JavaScript -->
+            </div>
+            <div class="cart-total">
+                <p>Итого: <span id="cartTotalAmount">0</span> ₽</p>
+            </div>
+            <button class="btn checkout-btn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <!-- Подключение JS файлов -->
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/product-page.js"></script>
+
+    <!-- Кнопка "Наверх" -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</body>
+</html> 

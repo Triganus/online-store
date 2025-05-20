@@ -1,0 +1,11 @@
+<svg width="600" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0f0f0"/>
+  <path d="M200,150 L400,150 L420,500 L320,510 L300,480 L280,510 L180,500 L200,150" fill="#5a3825" stroke="#000000" stroke-width="2"/>
+  <path d="M200,150 L250,150 L250,350 M400,150 L350,150 L350,350" stroke="#000000" stroke-width="2" fill="none"/>
+  <path d="M250,200 L350,200" stroke="#000000" stroke-width="2" fill="none"/>
+  <path d="M210,230 L240,230 M360,230 L390,230" stroke="#805030" stroke-width="8" fill="none"/>
+  <path d="M220,270 L240,270 M360,270 L380,270" stroke="#805030" stroke-width="8" fill="none"/>
+  <path d="M230,310 L240,310 M360,310 L370,310" stroke="#805030" stroke-width="8" fill="none"/>
+  <text x="300" y="570" font-family="Arial" font-size="20" text-anchor="middle">Кожаная куртка</text>
+  <text x="300" y="600" font-family="Arial" font-size="16" text-anchor="middle" fill="#e74c3c">-33%</text>
+</svg> 

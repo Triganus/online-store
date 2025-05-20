@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e74c3c">
+    <title>IMODA - Мужская одежда</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">IMODA</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="main-nav">
+                    <ul class="menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="women.html">Женщинам</a></li>
+                        <li><a href="men.html" class="active">Мужчинам</a></li>
+                        <li><a href="accessories.html">Аксессуары</a></li>
+                        <li><a href="sale.html">Распродажа</a></li>
+                    </ul>
+                </nav>
+                <div class="user-controls">
+                    <div class="search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="user">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay"></div>
+
+    <main>
+        <!-- Баннер категории -->
+        <section class="category-banner">
+            <div class="container">
+                <h1>Мужская одежда</h1>
+                <p>Стильная и комфортная одежда для современных мужчин</p>
+            </div>
+        </section>
+
+        <!-- Товары -->
+        <section class="products">
+            <div class="container">
+                <div class="filter-toggle">
+                    <button id="toggle-filters" class="btn">
+                        <i class="fas fa-filter"></i> Фильтры и сортировка
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                
+                <div class="filter-sort-container" id="filter-container">
+                    <div class="filters">
+                        <div class="filter-group">
+                            <h4>Категория</h4>
+                            <div class="filter-options">
+                                <label><input type="checkbox" name="subcategory" value="all" checked> Все</label>
+                                <label><input type="checkbox" name="subcategory" value="shirts"> Рубашки</label>
+                                <label><input type="checkbox" name="subcategory" value="tshirts"> Футболки</label>
+                                <label><input type="checkbox" name="subcategory" value="jeans"> Джинсы</label>
+                                <label><input type="checkbox" name="subcategory" value="outerwear"> Верхняя одежда</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Цена</h4>
+                            <div class="price-slider">
+                                <div class="price-inputs">
+                                    <input type="number" id="min-price" placeholder="От" min="0">
+                                    <span>—</span>
+                                    <input type="number" id="max-price" placeholder="До" min="0">
+                                </div>
+                                <button id="apply-price">Применить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Размер</h4>
+                            <div class="filter-options size-options">
+                                <label><input type="checkbox" name="size" value="S"> S</label>
+                                <label><input type="checkbox" name="size" value="M"> M</label>
+                                <label><input type="checkbox" name="size" value="L"> L</label>
+                                <label><input type="checkbox" name="size" value="XL"> XL</label>
+                                <label><input type="checkbox" name="size" value="XXL"> XXL</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Цвет</h4>
+                            <div class="filter-options color-options">
+                                <label><input type="checkbox" name="color" value="white"> Белый</label>
+                                <label><input type="checkbox" name="color" value="black"> Черный</label>
+                                <label><input type="checkbox" name="color" value="blue"> Синий</label>
+                                <label><input type="checkbox" name="color" value="gray"> Серый</label>
+                                <label><input type="checkbox" name="color" value="green"> Зеленый</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Другие</h4>
+                            <div class="filter-options">
+                                <label><input type="checkbox" name="sale" value="true"> Скидки</label>
+                                <label><input type="checkbox" name="new" value="true"> Новинки</label>
+                            </div>
+                        </div>
+                        
+                        <button id="reset-filters" class="btn">Сбросить фильтры</button>
+                    </div>
+                    
+                    <div class="sort-container">
+                        <label for="sort-select">Сортировать по:</label>
+                        <select id="sort-select">
+                            <option value="default">По умолчанию</option>
+                            <option value="price-asc">Цена: по возрастанию</option>
+                            <option value="price-desc">Цена: по убыванию</option>
+                            <option value="name-asc">Название: А-Я</option>
+                            <option value="name-desc">Название: Я-А</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="filtered-count"></div>
+                <div class="product-grid" id="product-grid">
+                    <!-- Товары будут добавлены через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Похожие категории -->
+        <section class="related-categories">
+            <div class="container">
+                <h2>Вас также может заинтересовать</h2>
+                <div class="category-grid">
+                    <div class="category" id="accessories">
+                        <div class="category-content">
+                            <h3>Аксессуары</h3>
+                            <a href="accessories.html" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="category" id="sale">
+                        <div class="category-content">
+                            <h3>Распродажа</h3>
+                            <a href="sale.html" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Подписка на рассылку -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Подпишитесь на нашу рассылку</h2>
+                <p>Узнавайте первыми о новых коллекциях и специальных предложениях</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit" class="btn">Подписаться</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>IMODA</h4>
+                    <p>Модный онлайн-магазин одежды и аксессуаров для мужчин и женщин.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Категории</h4>
+                    <ul>
+                        <li><a href="women.html">Женщинам</a></li>
+                        <li><a href="men.html">Мужчинам</a></li>
+                        <li><a href="accessories.html">Аксессуары</a></li>
+                        <li><a href="sale.html">Распродажа</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Модная, 123</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@imoda.ru</li>
+                    </ul>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IMODA. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно корзины -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3>Корзина</h3>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-items">
+                <!-- Товары в корзине будут добавлены через JavaScript -->
+            </div>
+            <div class="cart-total">
+                <p>Итого: <span id="cartTotalAmount">0</span> ₽</p>
+            </div>
+            <button class="btn checkout-btn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript файлов -->
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/filter-men.js"></script>
+
+    <!-- Кнопка "Наверх" -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</body>
+</html> 

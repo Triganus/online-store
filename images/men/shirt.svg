@@ -1,0 +1,8 @@
+<svg width="600" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0f0f0"/>
+  <path d="M200,150 L400,150 L400,550 L200,550 Z" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+  <path d="M300,150 L300,350" stroke="#000000" stroke-width="2" fill="none"/>
+  <path d="M220,180 L280,180 M320,180 L380,180" stroke="#000000" stroke-width="2" fill="none"/>
+  <path d="M200,150 L150,200 L180,220 L200,200 M400,150 L450,200 L420,220 L400,200" stroke="#000000" stroke-width="2" fill="none"/>
+  <text x="300" y="600" font-family="Arial" font-size="20" text-anchor="middle">Базовая рубашка</text>
+</svg> 

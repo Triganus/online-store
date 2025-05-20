@@ -1,0 +1,16 @@
+<svg width="600" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0f8f3"/>
+  <g transform="translate(150, 150)">
+    <!-- Сумка -->
+    <path d="M50,100 L250,100 L270,350 L30,350 Z" fill="#ffebcc" stroke="#000000" stroke-width="2"/>
+    <path d="M80,100 L80,50 C80,0 220,0 220,50 L220,100" stroke="#000000" stroke-width="2" fill="none"/>
+    <path d="M100,200 L200,200 M100,250 L200,250" stroke="#000000" stroke-width="2" fill="none"/>
+    
+    <!-- Очки -->
+    <circle cx="100" cy="400" r="30" fill="none" stroke="#000000" stroke-width="2"/>
+    <circle cx="200" cy="400" r="30" fill="none" stroke="#000000" stroke-width="2"/>
+    <path d="M130,400 L170,400" stroke="#000000" stroke-width="2" fill="none"/>
+    <path d="M70,400 L40,410 M230,400 L260,410" stroke="#000000" stroke-width="2" fill="none"/>
+  </g>
+  <text x="300" y="700" font-family="Arial" font-size="30" text-anchor="middle">Аксессуары</text>
+</svg> 

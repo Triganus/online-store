@@ -1,0 +1,52 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон -->
+  <defs>
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Фоновый цвет -->
+  <rect width="1920" height="1080" fill="#333333"/>
+  
+  <!-- Декоративные элементы -->
+  <g opacity="0.1">
+    <!-- Вертикальные линии -->
+    <line x1="480" y1="0" x2="480" y2="1080" stroke="#fff" stroke-width="2"/>
+    <line x1="960" y1="0" x2="960" y2="1080" stroke="#fff" stroke-width="2"/>
+    <line x1="1440" y1="0" x2="1440" y2="1080" stroke="#fff" stroke-width="2"/>
+    
+    <!-- Горизонтальные линии -->
+    <line x1="0" y1="270" x2="1920" y2="270" stroke="#fff" stroke-width="2"/>
+    <line x1="0" y1="540" x2="1920" y2="540" stroke="#fff" stroke-width="2"/>
+    <line x1="0" y1="810" x2="1920" y2="810" stroke="#fff" stroke-width="2"/>
+  </g>
+  
+  <!-- Декоративные элементы одежды -->
+  <g transform="translate(100, 150) scale(0.7)" opacity="0.3">
+    <!-- Схематичное платье -->
+    <path d="M120,50 L200,50 L250,400 L70,400 Z" fill="none" stroke="#fff" stroke-width="5"/>
+    <path d="M120,50 C120,20 200,20 200,50" fill="none" stroke="#fff" stroke-width="5"/>
+  </g>
+  
+  <g transform="translate(1500, 200) scale(0.7)" opacity="0.3">
+    <!-- Схематичная рубашка -->
+    <path d="M120,50 L200,50 L200,300 L120,300 Z" fill="none" stroke="#fff" stroke-width="5"/>
+    <path d="M120,50 L60,100 L120,150 M200,50 L260,100 L200,150" fill="none" stroke="#fff" stroke-width="5"/>
+  </g>
+  
+  <g transform="translate(300, 600) scale(0.7)" opacity="0.3">
+    <!-- Схематичные брюки -->
+    <path d="M120,50 L200,50 L220,400 L180,400 M120,50 L100,400 L140,400" fill="none" stroke="#fff" stroke-width="5"/>
+  </g>
+  
+  <g transform="translate(1300, 550) scale(0.7)" opacity="0.3">
+    <!-- Схематичная сумка -->
+    <path d="M100,100 L220,100 L250,300 L70,300 Z" fill="none" stroke="#fff" stroke-width="5"/>
+    <path d="M100,100 C100,50 220,50 220,100" fill="none" stroke="#fff" stroke-width="5"/>
+  </g>
+  
+  <!-- Полупрозрачный оверлей -->
+  <rect width="1920" height="1080" fill="url(#overlay)"/>
+</svg> 

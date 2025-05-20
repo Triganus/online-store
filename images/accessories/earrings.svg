@@ -1,0 +1,7 @@
+<svg width="600" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0f0f0"/>
+  <circle cx="250" cy="300" r="80" fill="none" stroke="#ffd700" stroke-width="10"/>
+  <circle cx="350" cy="300" r="80" fill="none" stroke="#ffd700" stroke-width="10"/>
+  <path d="M250,220 L250,200 L300,150 L350,200 L350,220" stroke="#ffd700" stroke-width="10" fill="none"/>
+  <text x="300" y="450" font-family="Arial" font-size="20" text-anchor="middle">Серьги-кольца</text>
+</svg> 
